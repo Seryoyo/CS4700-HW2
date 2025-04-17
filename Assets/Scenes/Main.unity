@@ -196,12 +196,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSprites: []
-  weaponSprites: []
-  weaponPrices: 
+  weaponSprites:
+  - {fileID: 930106454, guid: e0b8cc3b7f4a70e40aa9c447c1b62a19, type: 3}
+  - {fileID: -203249380, guid: e0b8cc3b7f4a70e40aa9c447c1b62a19, type: 3}
+  - {fileID: -2024440849, guid: e0b8cc3b7f4a70e40aa9c447c1b62a19, type: 3}
+  - {fileID: 1219425412, guid: e0b8cc3b7f4a70e40aa9c447c1b62a19, type: 3}
+  - {fileID: -791073315, guid: e0b8cc3b7f4a70e40aa9c447c1b62a19, type: 3}
+  - {fileID: 1138228542, guid: e0b8cc3b7f4a70e40aa9c447c1b62a19, type: 3}
+  - {fileID: 1553359855, guid: e0b8cc3b7f4a70e40aa9c447c1b62a19, type: 3}
+  weaponPrices: 1e0000004600000082000000c80000001301000090010000
   xpTable: 
   player: {fileID: 875784861}
+  weapon: {fileID: 454810516}
   floatingTextManager: {fileID: 1562125735}
-  pesos: 0
+  pesos: 2000
   experience: 0
 --- !u!4 &177868325
 Transform:
@@ -368,7 +376,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 232691589}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 527454099}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: OnUpgradeClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &232691589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,9 +827,16 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  damagePoint: 1
-  pushForce: 4
-  weaponlevel: 0
+  damagePoint: 01000000020000000300000004000000050000000600000007000000
+  pushForce:
+  - 2
+  - 2.2
+  - 2.3
+  - 2.4
+  - 2.5
+  - 2.6
+  - 2.7
+  weaponLevel: 0
 --- !u!61 &454810517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4777,6 +4804,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c42e76ddb46d34baa6ba6107852038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelText: {fileID: 406883937}
+  hitpointText: {fileID: 1185805077}
+  pesosText: {fileID: 721404454}
+  upgradeCostText: {fileID: 545795395}
+  xpText: {fileID: 2015105819}
+  characterSelectionSprite: {fileID: 947279231}
+  weaponSprite: {fileID: 616749123}
+  xpBar: {fileID: 609917002}
 --- !u!1 &545795393
 GameObject:
   m_ObjectHideFlags: 0
@@ -5901,7 +5936,7 @@ GameObject:
   - component: {fileID: 947279232}
   - component: {fileID: 947279231}
   m_Layer: 5
-  m_Name: Image
+  m_Name: CharacterSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15795,6 +15830,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: show
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 527454099}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: UpdateMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1973781329
